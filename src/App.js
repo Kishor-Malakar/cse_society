@@ -1,25 +1,66 @@
-import logo from './logo.svg';
 import './App.css';
-
+import './components/socialMedia/SocialMedia.css'
+import {Header, Carousel, Navbar, Vision, Eventss, Footer, Members, Alumni, Announcements, Contacts} from './components';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+import React, {useState, useEffect} from 'react';
+import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 function App() {
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    setLoading(true)
+    setTimeout(()=>{
+      setLoading(false)
+    },2500)
+  }, [])
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  <div className='a_main'>
+    {
+      loading?
+      
+     ( 
+      <div className="loader_section">
+      <ClimbingBoxLoader
+        color={'black'}
+        loading={loading}
+        size={15}
+      />
+      <span className='loader'>Loading...</span>
+      </div>)
+  :(
+    <>
+    <Navbar/>
+     <section id="n_header">
+    <Header/>
+    </section>
+     <div id="n_announcements">
+    <Announcements/>
     </div>
+     <div id="n_carousel">
+    <Carousel/>
+    </div>
+     <div id="n_vision">
+    <Vision/>
+    </div>
+     <div id="n_events">
+    <Eventss/>  
+    </div>
+     <div id="n_members">
+    <Members/>
+    </div>
+     <div id="n_alumni">
+    <Alumni/>
+    </div>
+     <div id="n_contacts">
+    <Contacts/>
+    </div>
+     <div id="n_footer">
+    <Footer/>
+    </div>
+    </>
+  )}
+  </div>
   );
 }
 
-export default App;
+export default App; 

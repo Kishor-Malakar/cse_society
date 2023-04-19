@@ -1,0 +1,175 @@
+.e_main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    max-height: max-content;
+    color: black;
+    /* background: linear-gradient(to top left, black 50%, gray 50%); */
+    background-image: url('../assets/bgIMG.png');
+    background-size: cover;
+}
+.e_heading{
+    letter-spacing: 1px;
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+    width: 80vw;
+    text-align: center;
+    margin: auto;
+    /* border-bottom: 5px white double; */
+    
+}
+:root {
+    --e: 1500ms;
+    --angle: 90deg;
+    --gradX: 100%;
+    --gradY: 50%;
+    --c1: rgba(168, 239, 255, 1);
+    --c2: rgba(168, 239, 255, 0.1);
+}
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 90deg;
+    inherits: true;
+}
+
+@property --gradX {
+    syntax: '<percentage>';
+    initial-value: 50%;
+    inherits: true;
+}
+
+@property --gradY {
+    syntax: '<percentage>';
+    initial-value: 0%;
+    inherits: true;
+}
+.e_heading {
+      border-bottom: 0.35rem solid;
+      border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
+      animation: borderRotate var(--e) linear infinite forwards;
+    }
+    @keyframes borderRotate {
+        100% {
+            --angle: 420deg;
+        }
+    }
+    
+    @keyframes borderRadial {
+        20% {
+          --gradX: 100%;
+          --gradY: 50%;
+        }
+        40% {
+            --gradX: 100%;
+            --gradY: 100%;
+      }
+      60% {
+          --gradX: 50%;
+          --gradY: 100%;
+        }
+      80% {
+          --gradX: 0%;
+          --gradY: 50%;
+        }
+      100% {
+          --gradX: 50%;
+          --gradY: 0%;
+        }
+    }
+#aboutMain{
+    position: relative;
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+    padding-top: 2rem;
+    padding-bottom: 6rem; 
+}
+.head_text{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 2px 3px 0px #000000;
+    line-height: 1.2;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-align: center;
+    font-size: 3rem !important;
+}
+.e_heading h3{
+    font-size: 1.3rem !important;
+    letter-spacing: 3px;
+    font-weight: 800;
+}
+@media screen and (max-width: 850px){
+    .e_heading h3{
+        font-size: 1.2rem !important;
+    }
+ }
+ 
+.app__cards-item{
+    width: 190px;
+    height: 300px;
+    display: flex;
+    justify-content: space-between !important;
+    align-items: center ;
+    flex-direction: column;
+    margin: 2rem;
+    margin-bottom: 0;
+    /* margin-top: 0; */
+}
+.app__cards-item  img{
+    width: 170px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+.app__cards-item h2{
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.1;
+    font-size: 1.1rem !important;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 900;
+}
+.app__cards-item p{
+    font-weight: 400;
+    margin-left: auto;
+    margin-right: auto;
+    color: black;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.app__cards{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    /* margin-top: 2rem; */
+    padding-top: 0.5rem;
+}
+@media screen and (min-width: 2000px){
+   .app__cards-item{
+    width: 270px;
+    margin: 2rem 4rem;
+   }
+
+    img{
+        height: 320px;
+    }
+}
+.event_details{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    max-height: max-content;
+    margin: auto;
+}
+

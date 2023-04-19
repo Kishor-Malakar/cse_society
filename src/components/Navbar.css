@@ -1,0 +1,11 @@
+.n_box{
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.active{
+    border-radius: 50%;
+    background-image: linear-gradient(to right top, #002fff, #002aff, #0024ff, #001dff, #0214ff, #440eff, #6107ff, #7700ff, #9e00ff, #bf00ff, #dc00ff, #f600ff);
+  
+}

@@ -1,0 +1,202 @@
+.al_main{
+    /* position: relative; */
+    min-height: 100vh ;
+    max-height: max-content;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* background: linear-gradient(to top left, black 50%, gray 50%); */
+    background-image: url('../assets/altbg1.png');
+    background-size: cover;
+}
+.al_heading{
+   
+    margin-bottom: 2rem;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 2px 3px 0px #505050;
+    line-height: 1.2;
+    font-weight: 900;
+    letter-spacing: 1px;
+    font-size: 2.5rem;
+}
+@media screen  and (max-width: 600px){
+    .al_heading{
+        font-size: 1.5rem;
+        margin-top: 0;
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+}
+ .head-text{
+    padding-top: 1rem;
+    margin-bottom: 0;
+ }
+ .app__flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bold-text{
+    font-weight: bold;
+    padding-top: 1rem;
+}
+ .app__work-portfolio{
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: center;
+    align-items: center;
+ }
+ .app__work-portfolio .app__work-item{
+    width: 320px;
+    height: 440px;
+    flex-direction: column;
+    /* background-color: #ff6f0088; */
+    background-image: url('../assets/bgIMG.png');
+    background-size: cover;
+    margin: 2rem;
+    padding: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    border-radius: 0.5rem;  
+    cursor: pointer;
+    transition: all 0.3s ease;
+ }
+@media screen  and (min-width: 2000px){
+    .app__work-portfolio .app__work-item{
+            width: 520px;
+            height: 619px;
+            padding: 1.25rem;
+            padding-top: 0;
+            padding-bottom: 0;
+            border-radius: 0.75rem;
+        }
+    }
+        @media screen  and (max-width: 309px){
+            .app__work-portfolio .app__work-item{
+            margin: 1rem;
+        }
+    }
+
+.app__work-img{
+    width: 270px;
+    height: 300px;
+
+    position: relative; 
+}
+    .app__work-img img{
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+        border: 0.35rem solid;
+        padding: 0.5rem;
+        border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
+        animation: borderRotate var(--d) linear infinite forwards;
+    }
+
+    @media screen  and (max-width: 530px){
+        .app__work-img img{
+        height: 270px;
+        width: 300px;
+    }
+}
+.app__work-hover{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    border-radius: 0.5rem;
+    opacity: 0;
+}
+    @media screen  and (min-width: 900px){
+        .app__work-hover{
+        background-color: rgba(0,0,0,0.5);
+    }
+}
+
+
+        @media screen  and (max-width: 899px){
+            .app__work-hover div{
+            display: none;
+        }
+    }
+    .app__work-hover div{
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        background-color: rgba(0,0,0,0.6);
+        border: 2.5px solid white;
+        color: #fff;
+        
+        margin-left: 1rem;
+        margin-right: 1rem;
+        cursor: pointer;
+        font-family: var(--font-base);
+        font-weight: 800;
+    }
+ 
+        .app__work-hover div svg{
+            width: 50%;
+            height: 50%;
+            color: var(--white-color);
+        }
+
+        @media screen  and (min-width: 900px){
+            .app__work-hover-phone div{
+            display: none;
+        }
+    }
+        .app__work-hover-phone div{
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        background-color: black;
+        border: 2.5px solid white;
+        color: #fff;
+        
+        margin-left: 1rem;
+        margin-right: 1rem;
+        cursor: pointer;
+        font-family: var(--font-base);
+        font-weight: 800;
+        }
+        .app__work-hover-phone div svg{
+            width: 50%;
+            height: 50%;
+            color: white;
+        }
+.app__work-content{ 
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+    padding: 0.5rem;
+    width: 100%;
+    position: relative;
+    flex-direction: column;
+}
+.app__work-content h4{
+    color: black;
+   text-transform: uppercase;
+   letter-spacing: 3px;
+   width: 280px;
+   font-size: 1rem !important;
+}
+.app__work-content h5{
+    font-size: 0.8rem !important;
+    width: 250px;
+    color: black;
+    margin-bottom: 0 !important;
+}
+.p_year{
+    padding-top: 0.2rem;
+    font-size: 0.8rem;
+    font-style: italic;
+    color: black;
+}

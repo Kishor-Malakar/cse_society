@@ -1,0 +1,229 @@
+.v_main{
+    color: white;
+    min-height: 100vh;
+    max-height: max-content;
+    max-width: 100vw;
+    /* background-image: linear-gradient(to right top, #0f00ff, #0086ff, #00b9ff, #00e0bd, #00ff51); */
+    /* background: linear-gradient(to bottom left, black 50%, gray 50%); */
+    background-image: url('../assets/altbg3.svg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 3rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    overflow-x: hidden;
+    overflow: hidden
+}
+.v_container{
+    padding: 3rem;
+    /* width: 50%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../assets/blob2.png');
+    filter: grayscale(50%);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.v_heading{
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+    font-size: 3rem !important;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 2px 3px 0px #898999;
+    line-height: 1.2;
+    font-weight: 900;
+    letter-spacing: 1px;
+    width: 100vw;
+}
+.second_part{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.hod_img{
+    height: 16rem;
+    width: 18rem;
+    /* background-size: cover; */
+    animation: up_down 5s ease-in-out infinite;
+}
+@keyframes up_down {
+    0%{
+      transform: translatey(-10px);
+    }
+    50%{
+      transform: translatey(10px);
+    }
+    100%{
+      transform: translatey(-10px);
+    }
+  }
+.desc{
+    width: max-content;
+    color: aliceblue;
+    /* margin-top: 2rem; */
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-right: 0;
+      font-family: 'Montserrat', sans-serif;
+  line-height: 1.5;
+  letter-spacing: 2px;
+
+}
+.desc_2{
+    color:aliceblue;
+    margin-top: 0.2rem;
+    width: fit-content;
+    font-size: 1.2rem;
+    width: max-content;
+      font-family: 'Montserrat', sans-serif;
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+:root {
+	--d: 2500ms;
+	--angle: 90deg;
+	--gradX: 100%;
+	--gradY: 50%;
+	--c1: rgba(168, 239, 255, 1);
+	--c2: rgba(168, 239, 255, 0.1);
+}
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 90deg;
+    inherits: true;
+  }
+  
+  @property --gradX {
+    syntax: '<percentage>';
+    initial-value: 50%;
+    inherits: true;
+  }
+  
+  @property --gradY {
+    syntax: '<percentage>';
+    initial-value: 0%;
+    inherits: true;
+  }
+.hod_description {
+	border: 0.35rem solid;
+	border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
+	animation: borderRotate var(--d) linear infinite forwards;
+}
+@keyframes borderRotate {
+	100% {
+		--angle: 420deg;
+	}
+}
+
+@keyframes borderRadial {
+	20% {
+		--gradX: 100%;
+		--gradY: 50%;
+	}
+	40% {
+		--gradX: 100%;
+		--gradY: 100%;
+	}
+	60% {
+		--gradX: 50%;
+		--gradY: 100%;
+	}
+	80% {
+		--gradX: 0%;
+		--gradY: 50%;
+	}
+	100% {
+		--gradX: 50%;
+		--gradY: 0%;
+	}
+}
+.hod_description{
+    /* border: 1px solid white; */
+    font-size: 1.2rem !important;
+  text-align: justify;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  font-weight: 400;
+    /* text-align: center; */
+    padding: 3rem;
+    /* padding-top: 0; */
+    width: fit-content;
+}
+@media screen and (max-width: 920px) {
+    .v_container{
+        padding: 1rem;
+    }
+    .hod_description{
+        padding: 1rem;
+    }
+    .desc{
+        font-size: 1.5rem;
+    }
+    .desc_2{
+        font-size: 1.2rem;
+    }
+    .v_main{
+        padding-right: 7rem;
+        padding-left: 7rem;
+    }
+}
+@media screen and (max-width: 850px) {
+    .second_part{
+        flex-direction: column;
+    }
+    .desc{
+        font-size: 1.2rem;
+    }
+    .desc_2{
+        font-size: 1rem;
+    }
+    .hod_description{
+        padding-top: 1rem;
+        font-size: 1.2rem;
+        width: 90%;
+    }
+    .v_heading{
+        font-size: 1.3rem;
+    }
+    .v_main{
+        padding-right: 5rem;
+        padding-left: 5rem;
+    }
+}
+@media screen and (max-width: 450px) {
+    .v_main{
+        padding-right: 2rem;
+        padding-left: 2rem;
+    }
+    .desc{
+        font-size: 1.1rem;
+    }
+    .desc_2{
+        font-size: 0.9rem;
+    }
+}
+@media screen and (max-width: 600px) {
+    .hod_description{
+        text-align: left;
+        padding-left: 0.3rem;
+        padding-right: 0.3rem;
+        font-size: 0.9rem !important;
+        line-height: 1.5;
+        letter-spacing: 1px;
+        font-weight: 200;
+    }
+    .v_heading{
+        font-size: 2rem !important;
+        margin-bottom: 0;
+    }
+}

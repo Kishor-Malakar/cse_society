@@ -1,0 +1,31 @@
+.b_main{
+    border-top: 1px solid white;
+    background-color: black;
+    color: white;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 1rem 0;
+    font-size: 0.8rem;
+    font-family: 'Montserrat', sans-serif;  
+    letter-spacing: 1px;
+
+}
+.banner_text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8rem;
+}
+.banner_text span{
+    margin-right: 8rem;
+}
+.banner_text span a{
+    margin-left: 1rem;
+    text-decoration: none;
+    color: cyan;
+}
+
+.banner_text span:last-child{
+    margin-right: 0;
+}
