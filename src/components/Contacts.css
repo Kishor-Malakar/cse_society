@@ -90,7 +90,7 @@ background: linear-gradient(90deg, rgba(255,243,142,1) 50%, rgba(9,90,85,1) 50%)
         width: 15rem;
     }
 }
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
     .con_container{
         flex-direction: column-reverse;
     }
