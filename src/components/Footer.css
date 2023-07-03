@@ -9,14 +9,14 @@
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 2px;    
 }
-.item {
+/* .item {
     background: rgba(49, 49, 54);
     color: rgb(190, 190, 190);
     font-size: 13px;
     display: flex;
     align-items  : center;
     
-}
+} */
 @media only screen and (max-width: 920px) {
     .footer-container{
         justify-content: space-between;
