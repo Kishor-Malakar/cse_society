@@ -12,6 +12,25 @@ background: linear-gradient(90deg, rgba(255,243,142,1) 50%, rgba(9,90,85,1) 50%)
    justify-content: center;
    align-items: center;
 }
+
+.item {
+    color: rgb(190, 190, 190);
+    font-size: 13px;
+    display: flex;
+    align-items  : center;
+    margin-top: 2rem;
+    margin-left: 0;
+}
+.item span{
+    margin-left: 0 !important; 
+}
+@media (max-width: 1200px){
+    .item{
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+        margin-left: 0;
+    }
+}
 .contactInfo{
     filter: drop-shadow(0 0.2rem 0.25rem rgba(0, 0, 0, 1.5));
     margin-top: 15vh;
