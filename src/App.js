@@ -1,6 +1,6 @@
 import './App.css';
 import './components/socialMedia/SocialMedia.css'
-import {Header, Carousel, Navbar, Vision, Eventss, Footer, Members, Alumni, Announcements, Contacts} from './components';
+import {Header, Carousel, Navbar, Vision, Eventss, Members, Alumni, Announcements, Contacts} from './components';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import React, {useState, useEffect} from 'react';
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
@@ -53,9 +53,6 @@ function App() {
     </div>
      <div id="n_contacts">
     <Contacts/>
-    </div>
-     <div id="n_footer">
-    <Footer/>
     </div>
     </>
   )}
