@@ -7,6 +7,7 @@ import { useState, useEffect } from 'react';
 import {client} from '../client';
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import {AiOutlineCopyright} from 'react-icons/ai';
 
 function Contacts() {
     const [emailJs, setEmailjs] = useState([]);
@@ -145,6 +146,13 @@ function Contacts() {
             rel="noreferrer"
           ><BsYoutube/></a>
           </div>
+                </div>
+          <div className="item">
+                    <span style={{ paddingRight: 5 }}>Copyright</span>
+                    <AiOutlineCopyright/>
+                    <span style={{ paddingLeft: 5 }}>
+                        {new Date().getFullYear()}, NIT Mizoram
+                    </span>
                 </div>
             </div>
             <div className="contactForm">
